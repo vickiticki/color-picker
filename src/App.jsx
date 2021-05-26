@@ -1,27 +1,34 @@
 import React, { Component } from 'react'
 
-const newBackgroundColor = `hsl(180, 90%, 50%)`
-const newStyle = { backgroundColor: newBackgroundColor }
 export class App extends Component {
   state = {
-    hValue: 180,
-    sValue: 50,
-    lValue: 50,
+    hValue: Math.ceil(Math.random() * 360),
+    sValue: Math.ceil(Math.random() * 100),
+    lValue: Math.ceil(Math.random() * 100),
   }
 
-  changeSomething = async () => {
-    console.log(this.state.hValue)
+  randomizeColor = () => {
+    this.setState({ hValue: Math.ceil(Math.random() * 360) })
+    this.setState({ sValue: Math.ceil(Math.random() * 100) })
+    this.setState({ lValue: Math.ceil(Math.random() * 100) })
   }
-  newBackgroundColor = `hsl(${this.state.hValue}, ${this.state.sValue}%, ${this.state.lValue}%)`
-  newStyle = { backgroundColor: newBackgroundColor }
+
   render() {
     return (
       <div className="everything">
         <header>
           <h1>Color</h1>
           {/* box that shows color */}
-          <div className="color output box" style={newStyle}></div>
-          <p>{newBackgroundColor}</p>
+          <div
+            className="color output box"
+            style={{
+              backgroundColor: `hsl(${this.state.hValue}, ${this.state.sValue}%, ${this.state.lValue}%)`,
+            }}
+          ></div>
+          <p>
+            hsl({this.state.hValue}, {this.state.sValue}%, {this.state.lValue}%)
+          </p>
+          <button onClick={() => this.randomizeColor()}>Random Color</button>
         </header>
         <div className="all sliders">
           <div className="hue slide container">
@@ -33,7 +40,7 @@ export class App extends Component {
               max="360"
               value={this.state.hValue}
               className="h slider"
-              onDrag={this.changeSomething}
+              onChange={event => this.setState({ hValue: event.target.value })}
             ></input>
           </div>
           <div className="saturation slide container">
@@ -45,6 +52,7 @@ export class App extends Component {
               max="100"
               value={this.state.sValue}
               className="s slider"
+              onChange={event => this.setState({ sValue: event.target.value })}
             ></input>
           </div>
           <div className="lightness slide container">
@@ -56,6 +64,7 @@ export class App extends Component {
               max="100"
               value={this.state.lValue}
               className="l slider"
+              onChange={event => this.setState({ lValue: event.target.value })}
             ></input>
           </div>
         </div>
