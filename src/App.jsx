@@ -36,7 +36,7 @@ export class App extends Component {
             {/* hue slider */}
             <input
               type="range"
-              min="1"
+              min="0"
               max="360"
               value={this.state.hValue}
               className="h slider"
@@ -48,7 +48,7 @@ export class App extends Component {
             <h2>S</h2>
             <input
               type="range"
-              min="1"
+              min="0"
               max="100"
               value={this.state.sValue}
               className="s slider"
@@ -60,7 +60,7 @@ export class App extends Component {
             <h2>L</h2>
             <input
               type="range"
-              min="1"
+              min="0"
               max="100"
               value={this.state.lValue}
               className="l slider"

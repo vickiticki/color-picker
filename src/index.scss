@@ -11,20 +11,15 @@ body {
   min-height: 100%;
 }
 .everything {
+  background-color: antiquewhite;
 }
 
 header {
   display: flex;
   align-items: center;
-  margin-left: 10px;
-}
-
-h1 {
-  margin-right: 10px;
-}
-
-header p {
-  margin-left: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-between;
 }
 
 .output {
@@ -35,14 +30,19 @@ header p {
 }
 
 .container {
-  background-color: blueviolet;
+  background-color: lavender;
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .container h2 {
   margin-right: 10px;
+}
+
+.slide {
+  border: solid black 1px;
 }
 
 .slider {
@@ -51,7 +51,7 @@ header p {
   width: 50%;
   height: 15px;
   border-radius: 5px;
-  background-color: aqua;
+  background-color: rgb(24, 9, 104);
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
