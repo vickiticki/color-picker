@@ -10,3 +10,68 @@ body {
   margin: 0;
   min-height: 100%;
 }
+.everything {
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+h1 {
+  margin-right: 10px;
+}
+
+header p {
+  margin-left: 10px;
+}
+
+.output {
+  height: 40px;
+  width: 40px;
+  // background-color: deeppink;
+  border: solid black 1px;
+}
+
+.container {
+  background-color: blueviolet;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.container h2 {
+  margin-right: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  background-color: aqua;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: firebrick;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: coral;
+  cursor: pointer;
+}
